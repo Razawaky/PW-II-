@@ -1,9 +1,41 @@
+body {
+    background: #363636 !important;
+}
+
+
 button:hover {
-    background-color: #fff3cd !important;
+    background-color: #ffc107 !important;
     transition: ease-in-out .5s !important;
     color: #000 !important;
 }
 
 button {
 transition: all .6s !important;
+}
+
+img {
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+img:hover {
+    transform: translateY(-10px);
+    transition: all 0.5s;
+}
+
+
+@keyframes burguer {
+    0% {
+        transform: translateY(10px);
+        transition: all 0.5s;
+    }
+    50% {
+        transform: translateY(0px);
+        transition: all 0.5s;
+    }
+    100% {
+        transform: translateY(-10px);
+        transition: all 0.5s;
+    }
+
 }
