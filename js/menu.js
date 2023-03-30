@@ -4,10 +4,10 @@ $(document).ready(function() {
         e.preventDefault() //Serve para controlar e gerenciar uma funcionaliade HTML (Uma função do Jquery)
         
         //capturar o ID do button clicado
-        var ID = $(this).attr('id')
-        console.log(ID)
+        foto = $(this).attr('data-foto')
+        pedido = $(this).attr('data-pedido')
 
-        switch(ID) {
+        switch(foto) {
             case '1':
                 $('img').attr('src', 'img/x burguer.png')
             break
@@ -23,8 +23,6 @@ $(document).ready(function() {
             case '5':
                 $('img').attr('src', 'img/x burguer.png')
             break
-            default: console.log('produto fora de estoque') 
-            alert('Produto fora de estoque')
         }  
 
 
