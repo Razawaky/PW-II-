@@ -30,39 +30,50 @@
                         <tr>
                             <td>Barbie kill bacon burguer</td>
                             <td class="text-center">R$ 69,69</td>
-                            <td> <button id="" class="btn btn-outline-light btn-block" data-foto="1"> Confira! </button>  </td>
-                            <td> <button id="" class="btn btn-outline-success btn-block" data-pedido="1"> Confira! </button>  </td>
+                            <td> <button id="" class="btn btn-outline-light btn-block btn-info" data-foto="1"> Confira! </button>  </td>
+                            <td> <button id="" class="btn btn-outline-success btn-block" data-id="prod01"
+                                data-nome="Água com Gás"
+                                data-valor="5.00"> Confira! </button>  </td>
                         </tr>
 
                         <tr>
                             <td>Barbie kill bacon burguer</td>
                             <td class="text-center">R$ 69,69</td>
-                            <td> <button id="" class="btn btn-outline-light btn-block" data-foto="2"> Confira! </button>  </td>
-                            <td> <button id="" class="btn btn-outline-success btn-block" data-pedido="2"> Confira! </button>  </td>
+                            <td> <button id="" class="btn btn-outline-light btn-block btn-info" data-foto="2"> Confira! </button>  </td>
+                            <td> <button id="" class="btn btn-outline-success btn-block" data-id="prod02" data-nome="Água com Gás"
+                                data-valor="5.00"> Confira! </button>  </td>
                         </tr>
                         <tr>
                             <td>Barbie kill bacon burguer</td>
                             <td class="text-center">R$ 69,69</td>
-                            <td> <button id="" class="btn btn-outline-light btn-block" data-foto="3"> Confira! </button>  </td>
-                            <td> <button id="" class="btn btn-outline-success btn-block" data-pedido="3"> Confira! </button>  </td>
+                            <td> <button id="" class="btn btn-outline-light btn-block btn-info" data-foto="3"> Confira! </button>  </td>
+                            <td> <button id="" class="btn btn-outline-success btn-block" data-id="prod03"
+                                data-nome="Água com Gás"
+                                data-valor="5.00"> Confira! </button>  </td>
                         </tr>
                         <tr>
                             <td>Barbie kill bacon burguer</td>
                             <td class="text-center">R$ 69,69</td>
-                            <td> <button id="" class="btn btn-outline-light btn-block" data-foto="4"> Confira! </button>  </td>
-                            <td> <button id="" class="btn btn-outline-success btn-block" data-pedido="4"> Confira! </button>  </td>
+                            <td> <button id="" class="btn btn-outline-light btn-block btn-info" data-foto="4"> Confira! </button>  </td>
+                            <td> <button id="" class="btn btn-outline-success btn-block" data-id="prod04"
+                                data-nome="Água com Gás"
+                                data-valor="5.00"> Confira! </button>  </td>
                         </tr>
                         <tr>
                             <td>Barbie kill bacon burguer</td>
                             <td class="text-center">R$ 69,69</td>
-                            <td> <button id="" class="btn btn-outline-light btn-block" data-foto="5"> Confira! </button>  </td>
-                            <td> <button id="" class="btn btn-outline-success btn-block" data-pedido="5"> Confira! </button>  </td>
+                            <td> <button id="" class="btn btn-outline-light btn-block btn-info" data-foto="5"> Confira! </button>  </td>
+                            <td> <button id="" class="btn btn-outline-success btn-block" data-id="prod05"
+                                data-nome="Água com Gás"
+                                data-valor="5.00"> Confira! </button>  </td>
                         </tr>
                         <tr>
                             <td>Barbie kill bacon burguer</td>
                             <td class="text-center">R$ 69,69</td>
-                            <td> <button id="" class="btn btn-outline-light btn-block" data-foto="6"> Confira! </button>  </td>
-                            <td> <button id="" class="btn btn-outline-success btn-block" data-pedido="6"> Confira! </button>  </td>
+                            <td> <button id="" class="btn btn-outline-light btn-block btn-info" data-foto="6"> Confira! </button>  </td>
+                            <td> <button id="" class="btn btn-outline-success btn-block" data-id="prod06"
+                                data-nome="Água com Gás"
+                                data-valor="5.00"> Confira! </button>  </td>
                         </tr>
                     </table>
                 </div>
@@ -90,9 +101,46 @@
                 </div>
             </div>
         </div>
-
     </div>
-    
+
+        <div class="row justify-content-center mt-3">
+            <div class="col-12 col-sm-3 col-md-3">
+                <div class="alert alert-warning">
+                    <h4 class="text-center text-dark">
+                        Resumo do pedido
+                    </h4>
+                </div>
+            </div>
+            <div class="col-12 col-sm-2 col-md-2">
+                <div class="alert alert-danger">
+                    <h4 id="vlrTotal" class="text-center text-dark">
+                        R$ 000,00
+                    </h4>
+                </div>
+            </div>
+            <div class="col-12 col-sm-1 col-md-1">
+                <button class="btn btn-danger btn-block btn-clean">
+                    <h2>X</h2>
+                </button>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 col-md-6">
+                <table class="table text-light ">
+                    <thead>
+                        <td>Nome do Produto</td>
+                        <td class="text-center">Quantidade</td>
+                        <td class="text-center">Valor Unitário</td>
+                        <td class="text-center">Valor Total</td>
+                    </thead>
+                    <tbody id="resumo">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
 
     <script src="js/jquery-3.6.3.min.js"></script>

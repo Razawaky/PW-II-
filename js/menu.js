@@ -1,11 +1,11 @@
 $(document).ready(function() {
                                     //selecionar todos os buttons e monitorar os clicks
-    $('.btn').click(function(e){  //$ simplificação do getElementBy por causa do Jquery. Jquery tem que ler toda a documentação
+    $('.btn-info').click(function(e){  //$ simplificação do getElementBy por causa do Jquery. Jquery tem que ler toda a documentação
         e.preventDefault() //Serve para controlar e gerenciar uma funcionaliade HTML (Uma função do Jquery)
         
         //capturar o ID do button clicado
         foto = $(this).attr('data-foto')
-        pedido = $(this).attr('data-pedido')
+        pedido = $(this).attr('data-id')
 
         switch(foto) {
             case '1':
@@ -26,5 +26,20 @@ $(document).ready(function() {
         }  
 
 
+    })
+
+    $('.btn-outline-success').click(function(e) {
+        e.preventDefault()
+
+        var qtde = prompt($(this).attr('data-nome')+"\nValor R$ "+$(this).attr('data-valor')+"\nInforme a quantidade desejada:" )
+
+        $('#resumo').append( `
+        <tr>
+            <td>${ $(this).attr('data-nome')}</td>
+            <td class="text-center">${qtde}</td>
+            <td class="text-center">Valor Unitário</td>
+            <td class="text-center">Valor Total</td>
+        </tr>
+        `)
     })
 })
