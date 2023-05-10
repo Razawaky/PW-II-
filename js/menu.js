@@ -28,18 +28,38 @@ $(document).ready(function() {
 
     })
 
+    var total = 0
+
     $('.btn-outline-success').click(function(e) {
         e.preventDefault()
 
         var qtde = prompt($(this).attr('data-nome')+"\nValor R$ "+$(this).attr('data-valor')+"\nInforme a quantidade desejada:" )
 
+
+        let subtotal = parseFloat(qtde)* parseFloat($(this).attr('data-valor'))
+
+        total += subtotal
+
+        console.log(total)
+
         $('#resumo').append( `
         <tr>
             <td>${ $(this).attr('data-nome')}</td>
             <td class="text-center">${qtde}</td>
-            <td class="text-center">Valor Unitário</td>
-            <td class="text-center">Valor Total</td>
+            <td class="text-center">${parseFloat($(this).attr('data-valor')).toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}</td>
+            <td class="text-center">${parseFloat(subtotal).toLocaleString("pt-BR",{style: "currency", currency: "BRL"})}</td>
         </tr>
         `)
+
+        $('#vlrTotal').empty()
+        $('#vlrTotal').append(total.toLocaleString("pt-BR", {style: "currency", currency: "BRL"} ))
+    })
+
+    //Criar a função de limpar o pedido
+    $('.btn-clean').click(function (e) {
+        e.preventDefault()
+        $('#resumo').empty()
+        $('#vlrTotal').empty()
+        $('#vlrTotal').append('R$ 00,00')
     })
 })
